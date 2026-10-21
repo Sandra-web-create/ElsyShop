@@ -1,0 +1,665 @@
+/* Réglages généraux */
+
+* {
+
+    box-sizing: border-box;
+
+}
+
+body {
+
+    margin: 0;
+
+    font-family: Arial, sans-serif;
+
+    background-color: #F8F1EE;
+
+    color: #572B43;
+
+}
+
+/* En-tête */
+
+header {
+
+    background-color: #572B43;
+
+    color: white;
+
+    text-align: center;
+
+    padding: 30px 15px;
+
+}
+
+header h1 {
+
+    margin: 0;
+
+    font-size: 36px;
+
+    letter-spacing: 2px;
+
+}
+
+header p {
+
+    margin-bottom: 0;
+
+}
+
+/* Présentation */
+
+.bienvenue {
+
+    text-align: center;
+
+    padding: 40px 20px;
+
+    background-color: #F0DEDC;
+
+}
+
+.bienvenue h2 {
+
+    font-size: 28px;
+
+}
+
+.bouton {
+
+    display: inline-block;
+
+    background-color: #B77C89;
+
+    color: white;
+
+    text-decoration: none;
+
+    padding: 12px 20px;
+
+    border-radius: 6px;
+
+    margin-top: 10px;
+
+}
+
+/* Catalogue */
+
+#produits {
+
+    padding: 30px 20px;
+
+}
+
+#produits > h2 {
+
+    text-align: center;
+
+    margin-bottom: 25px;
+
+}
+
+.produits {
+
+    display: grid;
+
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+
+    gap: 20px;
+
+    max-width: 900px;
+
+    margin: 0 auto;
+
+}
+
+.carte-produit {
+
+    background-color: white;
+
+    padding: 15px;
+
+    border-radius: 10px;
+
+    text-align: center;
+
+    box-shadow: 0 3px 10px rgba(87, 43, 67, 0.10);
+
+}
+
+.carte-produit img {
+
+    display: block;
+
+    width: 100%;
+
+    height: 220px;
+
+    object-fit: contain;
+
+    margin-bottom: 12px;
+
+}
+
+.carte-produit h3 {
+
+    margin: 10px 0;
+
+}
+
+.carte-produit p {
+
+    font-weight: bold;
+
+    color: #B77C89;
+
+}
+
+/* Boutons */
+
+button {
+
+    background-color: #572B43;
+
+    color: white;
+
+    border: none;
+
+    padding: 11px 14px;
+
+    border-radius: 6px;
+
+    cursor: pointer;
+
+}
+
+button:hover,
+
+.bouton:hover {
+
+    background-color: #B77C89;
+
+}
+
+/* Panier */
+
+.section-panier {
+
+    background-color: white;
+
+    margin: 20px;
+
+    padding: 25px;
+
+    border-radius: 10px;
+
+}
+
+.total {
+
+    font-weight: bold;
+
+    font-size: 18px;
+
+}
+
+.note-livraison {
+
+    color: #6D5964;
+
+}
+
+/* Pied de page */
+
+footer {
+
+    text-align: center;
+
+    background-color: #572B43;
+
+    color: white;
+
+    padding: 18px;
+
+    margin-top: 30px;
+
+}
+
+/* Adaptation aux petits écrans */
+
+@media (max-width: 500px) {
+
+    .produits {
+
+        grid-template-columns: 1fr;
+
+    }
+
+    .carte-produit img {
+
+        height: 250px;
+
+    }
+
+    header h1 {
+
+        font-size: 30px;
+
+    }
+
+}
+
+/* Amélioration du design ElsyShop */
+
+html {
+
+    scroll-behavior: smooth;
+
+}
+
+body {
+
+    line-height: 1.6;
+
+}
+
+header {
+
+    padding: 35px 20px;
+
+    box-shadow: 0 3px 12px rgba(0, 0, 0, 0.12);
+
+}
+
+header h1 {
+
+    font-size: 40px;
+
+    font-weight: bold;
+
+}
+
+.bienvenue {
+
+    padding: 55px 20px;
+
+}
+
+.bienvenue h2 {
+
+    margin-bottom: 12px;
+
+}
+
+.carte-produit {
+
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
+
+    border: 1px solid #F0DEDC;
+
+}
+
+.carte-produit:hover {
+
+    transform: translateY(-5px);
+
+    box-shadow: 0 8px 20px rgba(87, 43, 67, 0.15);
+
+}
+
+.bouton,
+
+button {
+
+    transition: background-color 0.25s ease;
+
+}
+
+/* Boutons modernes ElsyShop */
+
+button,
+
+.bouton {
+
+    font-family: Arial, sans-serif;
+
+    font-weight: bold;
+
+    letter-spacing: 0.3px;
+
+    border-radius: 8px;
+
+    padding: 12px 18px;
+
+}
+
+button {
+
+    box-shadow: 0 3px 7px rgba(87, 43, 67, 0.15);
+
+}
+
+button:active,
+
+.bouton:active {
+
+    transform: scale(0.97);
+
+}
+
+button:focus-visible,
+
+.bouton:focus-visible {
+
+    outline: 3px solid #D9A7B0;
+
+    outline-offset: 3px;
+
+}
+
+/* Pied de page professionnel */
+
+footer {
+
+    padding: 30px 15px;
+
+    text-align: center;
+
+    line-height: 1.8;
+
+    box-shadow: 0 -3px 12px rgba(0, 0, 0, 0.08);
+
+}
+
+footer p {
+
+    margin: 5px 0;
+
+    font-size: 14px;
+
+    letter-spacing: 0.3px;
+
+}
+
+/* Adaptation aux téléphones */
+
+@media (max-width: 500px) {
+
+    header {
+
+        padding: 25px 12px;
+
+    }
+
+    header h1 {
+
+        font-size: 30px;
+
+    }
+
+    .bienvenue {
+
+        padding: 35px 15px;
+
+    }
+
+    .bienvenue h2 {
+
+        font-size: 24px;
+
+    }
+
+    #produits {
+
+        padding: 25px 12px;
+
+    }
+
+    .produits {
+
+        grid-template-columns: 1fr;
+
+        gap: 16px;
+
+    }
+
+    .carte-produit {
+
+        padding: 15px;
+
+    }
+
+    .section-panier {
+
+        margin: 12px;
+
+        padding: 18px;
+
+    }
+
+    .villes-livraison {
+
+        display: flex;
+
+        flex-wrap: wrap;
+
+        gap: 10px;
+
+    }
+
+    .villes-livraison button {
+
+        flex: 1 1 130px;
+
+    }
+
+}
+
+/* Barre de navigation ElsyShop */
+
+.navigation {
+
+    position: sticky;
+
+    top: 0;
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    flex-wrap: wrap;
+
+    gap: 25px;
+
+    padding: 16px 20px;
+
+    background-color: #FFFFFF;
+
+    border-bottom: 1px solid #F0DEDC;
+
+    box-shadow: 0 3px 10px rgba(87, 43, 67, 0.08);
+
+
+
+}
+
+.navigation a {
+
+    color: #572B43;
+
+    text-decoration: none;
+
+    font-weight: bold;
+
+    font-size: 14px;
+
+    transition: color 0.2s ease;
+
+}
+
+.navigation a:hover {
+
+    color: #B77C89;
+
+}
+
+@media (max-width: 500px) {
+
+    .navigation {
+
+        gap: 12px 18px;
+
+        padding: 14px 10px;
+
+    }
+
+    .navigation a {
+
+        font-size: 13px;
+
+    }
+
+}
+
+.choix-couleurs {
+
+    text-align: left;
+
+    width: 100%;
+
+    margin-left: 0;
+
+    padding-left: 0;
+
+}
+
+.ligne-couleur {
+
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+    width: 100%;
+
+    padding: 8px 0;
+
+    text-align: left;
+
+}
+
+.ligne-couleur span {
+
+    text-align: left;
+
+}
+
+.ligne-couleur button {
+
+    width: 32px;
+
+    height: 32px;
+
+    padding: 0;
+
+    margin-left: 10px;
+
+    flex-shrink: 0;
+
+}
+
+/* Formulaire de commande ElsyShop */
+
+#formulaire-commande {
+
+    background: #fff0f5;
+
+    padding: 20px;
+
+    margin-top: 20px;
+
+    border-radius: 15px;
+
+    border: 1px solid #f3c4d5;
+
+}
+
+#formulaire-commande[hidden] {
+
+    display: none;
+
+}
+
+#formulaire-commande h3 {
+
+    color: #c2185b;
+
+    text-align: center;
+
+    margin-bottom: 20px;
+
+}
+
+#formulaire-client {
+
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 10px;
+
+}
+
+#formulaire-client label {
+
+    font-weight: bold;
+
+    color: #444;
+
+}
+
+#formulaire-client input,
+
+#formulaire-client select {
+
+    width: 100%;
+
+    padding: 12px;
+
+    border: 1px solid #e5a5bf;
+
+    border-radius: 8px;
+
+    font-size: 16px;
+
+    box-sizing: border-box;
+
+    background: white;
+
+}
+
+#formulaire-client button {
+
+    background: #d63384;
+
+    color: white;
+
+    padding: 13px;
+
+    border: none;
+
+    border-radius: 8px;
+
+    font-size: 16px;
+
+    font-weight: bold;
+
+    cursor: pointer;
+
+    margin-top: 10px;
+
+}

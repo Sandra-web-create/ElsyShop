@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+
+<html lang="fr">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>ElsyShop | Mode et beauté</title>
+
+   <link rel="stylesheet" href="style.css">
+
+<script src="script.js" defer></script>
+</head>
+
+<body>
+
+    <nav class="navigation">
+
+    <a href="#">Accueil</a>
+
+    <a href="#produits">Produits</a>
+
+    <a href="#panier">Mon panier 🛍️</a>
+
+    <a href="https://wa.me/237699476492" target="_blank" rel="noopener noreferrer">WhatsApp</a>
+
+</nav>
+
+    <header>
+
+        <h1>ElsyShop</h1>
+
+        <p>La mode et la beauté à portée de main ✨</p>
+
+    </header>
+
+    <main>
+
+        <section class="bienvenue">
+
+            <h2>Bienvenue chez ElsyShop !</h2>
+
+            <p>Découvre nos sacs et nos accessoires.</p>
+
+            <a href="#produits" class="bouton">Découvrir nos produits</a>
+
+        </section>
+
+        <section id="produits">
+
+            <h2>Nos produits</h2>
+
+            <div class="produits" id="liste-produits">
+
+                <article class="carte-produit">
+
+                    <img src="Images/sac-teri.jpg" alt="Sac Teri">
+
+                    <h3>Sac Teri</h3>
+
+                    <p>10 000 FCFA</p>
+
+                    <button type="button">Ajouter au panier</button>
+
+                </article>
+
+                <article class="carte-produit">
+
+                    <img src="Images/sac-rowan.jpg" alt="Sac Rowan">
+
+                    <h3>Sac Rowan</h3>
+
+                    <p>11 000 FCFA</p>
+
+                    <button type="button">Ajouter au panier</button>
+
+                </article>
+
+                <article class="carte-produit">
+
+                    <img src="Images/lunettes-chrome.jpg" alt="Lunettes chrome">
+
+                    <h3>Lunettes chrome</h3>
+
+                    <p>5 500 FCFA</p>
+
+                    <button type="button">Ajouter au panier</button>
+
+                </article>
+
+                <article class="carte-produit">
+
+                    <img src="Images/tote-bag.jpg" alt="Tote bag">
+
+                    <h3>Tote bag</h3>
+
+                    <p>4 000 FCFA</p>
+
+                    <button type="button">Ajouter au panier</button>
+
+                </article>
+
+            </div>
+
+        </section>
+
+        <section class="section-panier" id="panier">
+
+            <h2>Mon panier 🛍️</h2>
+
+           <p>Choisis ta ville de livraison :</p>
+
+<div class="villes-livraison">
+
+    <button type="button" class="bouton-ville" data-ville="Douala">📍 Douala</button>
+
+    <button type="button" class="bouton-ville" data-ville="Yaoundé">📍 Yaoundé</button>
+
+    <button type="button" class="bouton-ville" data-ville="Autre">📍 Autre ville</button>
+
+</div>
+
+<p id="ville-choisie">Aucune ville sélectionnée.</p>
+<p id="frais-livraison">Frais de livraison : à confirmer</p>
+
+            <div id="liste-panier">
+
+                <p>Ton panier est vide.</p>
+
+            </div>
+
+            <p class="total">
+
+                Total : <span id="total-panier">0</span> FCFA
+
+            </p>
+
+            <p class="note-livraison">
+
+                Les frais de livraison ne sont pas inclus.
+
+            </p>
+            <button type="button" id="commander-whatsapp">
+
+    Commander sur WhatsApp 📱
+
+</button>
+
+<div id="formulaire-commande" hidden>
+
+    <h3>Informations de commande 📝</h3>
+
+    <form id="formulaire-client">
+
+        <label for="nom-client">Nom complet :</label>
+
+        <input type="text" id="nom-client" required
+
+               placeholder="Entre ton nom complet">
+
+         <label for="telephone-client">Numéro de téléphone :</label>
+
+         <input type="tel" id="telephone-client" required
+
+             placeholder="Ex. : 6XXXXXXXX">
+
+         <label for="quartier-client">Quartier :</label>
+
+         <input type="text" id="quartier-client" required
+
+             placeholder="Entre ton quartier">
+
+         <label for="ville-client">Ville :</label>
+
+         <select id="ville-client" required>
+
+             <option value="">Choisir une ville</option>
+
+             <option value="Douala">Douala</option>
+
+             <option value="Yaoundé">Yaoundé</option>
+
+        </select>
+
+        <label for="mode-reception">Mode de réception :</label>
+
+        <select id="mode-reception" required>
+
+            <option value="">Choisir une option</option>
+
+            <option value="Retrait">Retrait</option>
+
+            <option value="Livraison">Livraison</option>
+
+        </select>
+
+        <button type="submit">Valider ma commande</button>
+
+    </form>
+
+</div>
+
+        </section>
+
+    </main>
+
+    <footer>
+
+        <p>© 2026 ElsyShop — Tous droits réservés.</p>
+
+    </footer>
+
+</body>
+
+</html>
