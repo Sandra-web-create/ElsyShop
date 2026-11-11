@@ -1,0 +1,6 @@
+{
+  "name": "ElsyShop - Boutique de Mode & Accessoires Douala",
+  "description": "Boutique en ligne haut de gamme à Douala, Cameroun. Sacs, accessoires de mode, lunettes, gadgets électroniques et produits de beauté avec commande WhatsApp.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
