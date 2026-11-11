@@ -1,0 +1,322 @@
+import { CategoryInfo, Product, DeliveryZone, OrderRecord } from '../types';
+
+export const HERO_BANNER = '/src/assets/images/elsy_hero_banner_1793992168652.jpg';
+export const CAT_SACS = '/src/assets/images/category_sacs_1793992167079.jpg';
+export const CAT_ACCESSOIRES = '/src/assets/images/category_accessoires_1793992168916.jpg';
+export const CAT_GADGETS = '/src/assets/images/category_gadgets_1793992169248.jpg';
+export const CAT_BEAUTE = '/src/assets/images/category_beaute_1793992169236.jpg';
+
+export const ELSY_PHONE = '+237 699 47 64 92';
+export const ELSY_WHATSAPP = '237699476492';
+export const ELSY_ADDRESS = 'Logpom Bassong, Carrefour Obama City, Douala - Cameroun';
+export const ELSY_EMAIL = 'skamga@gmail.com';
+
+export const CATEGORIES: CategoryInfo[] = [
+  {
+    id: 'sacs',
+    name: 'Sacs ',
+    tagline: 'L’art du cuir raffiné',
+    description: 'Sacs à main structurés, cabas spacieux en cuir pleine fleur et pochettes du soir pour sublimer toutes vos tenues.',
+    image: CAT_SACS,
+    productCount: 8,
+  },
+  {
+    id: 'accessoires',
+    name: 'Accessoires & Lunettes',
+    tagline: 'La touche d’éclat indispensable',
+    description: 'Lunettes de soleil haute protection, joncs et bracelets dorés, colliers intemporels pour une allure affirmée.',
+    image: CAT_ACCESSOIRES,
+    productCount: 10,
+  },
+  {
+    id: 'gadgets',
+    name: 'Gadgets Électroniques',
+    tagline: 'Technologie chic & pratique',
+    description: 'Montres connectées élégantes, écouteurs sans fil haute fidélité et chargeurs design pour votre quotidien dynamique.',
+    image: CAT_GADGETS,
+    productCount: 6,
+  },
+  {
+    id: 'beaute',
+    name: 'Produits de Beauté',
+    tagline: 'Révélez votre éclat naturel',
+    description: 'Sérums vitaminés, soins visage botaniques et élixirs hydratants formulés pour sublimer votre peau sous le soleil tropical.',
+    image: CAT_BEAUTE,
+    productCount: 7,
+  },
+];
+
+export const PRODUCTS: Product[] = [
+  {
+    id: 'prod-sac-01',
+    name: 'Sac Cabas Léon Chocolat',
+    subtitle: 'Cuir texturé chocolat & finitions dorées',
+    category: 'sacs',
+    categoryLabel: 'Sacs',
+    price: 32500,
+    oldPrice: 38000,
+    image: CAT_SACS,
+    gallery: [CAT_SACS, HERO_BANNER],
+    colors: [
+      { name: 'Chocolat', hex: '#4A3027' },
+      { name: 'Beige Crème', hex: '#E8DCCB' },
+      { name: 'Noir Ébène', hex: '#1E1E1E' },
+    ],
+    description: 'Confectionné avec soin dans un cuir synthétique texturé haut de gamme résistant à l’humidité. Doté d’un compartiment principal zippé spacieux pour accueillir vos essentiels quotidiens, un ordinateur 13 pouces et vos documents.',
+    details: [
+      'Dimensions : 34 cm (L) × 26 cm (H) × 14 cm (P)',
+      'Fermeture éclair centrale & fermoir à boucle dorée',
+      'Bandoulière amovible et poignées renforcées',
+      'Poches intérieures pour smartphone et clés',
+    ],
+    isNew: true,
+    isPromo: true,
+    stockStatus: 'En stock',
+    rating: 4.9,
+    reviewsCount: 38,
+  },
+  {
+    id: 'prod-acc-01',
+    name: 'Lunettes Solaires Riviera Écaille',
+    subtitle: 'Verres polarisés UV400 & monture rétro chic',
+    category: 'accessoires',
+    categoryLabel: 'Accessoires',
+    price: 16500,
+    oldPrice: 19500,
+    image: CAT_ACCESSOIRES,
+    gallery: [CAT_ACCESSOIRES],
+    colors: [
+      { name: 'Écaille Ambrée', hex: '#806451' },
+      { name: 'Noir Profond', hex: '#1C1917' },
+      { name: 'Beige Nude', hex: '#E8DCCB' },
+    ],
+    description: 'Allure intemporelle inspirée de la riviera méditerranéenne. Monture en acétate solide et légère offrant une protection solaire totale contre les forts rayons UV du Cameroun.',
+    details: [
+      'Protection catégorie 3 UV400',
+      'Livré avec son étui rigide et chamoisine ElsyShop',
+      'Branches souples anti-pincement',
+      'Confortable pour port prolongé en voiture et en extérieur',
+    ],
+    isNew: true,
+    stockStatus: 'En stock',
+    rating: 4.85,
+    reviewsCount: 29,
+  },
+  {
+    id: 'prod-gadget-01',
+    name: 'Montre Connectée Elsy Luxe Rose Gold',
+    subtitle: 'Suivi santé, appels Bluetooth & écran AMOLED',
+    category: 'gadgets',
+    categoryLabel: 'Gadgets électroniques',
+    price: 36000,
+    oldPrice: 42000,
+    image: CAT_GADGETS,
+    gallery: [CAT_GADGETS],
+    colors: [
+      { name: 'Rose Gold / Noir', hex: '#B76E79' },
+      { name: 'Argent / Blanc', hex: '#D1D5DB' },
+      { name: 'Or Doré / Beige', hex: '#D4AF37' },
+    ],
+    description: 'Une montre intelligente ultrafine qui allie technologie moderne et chic joaillier. Répondez à vos appels au volant ou en réunion, suivez vos pas, votre fréquence cardiaque et vos cycles de sommeil en toute discrétion.',
+    details: [
+      'Écran tactile HD AMOLED 1.43 pouces',
+      'Autonomie longue durée : 5 à 7 jours d’utilisation',
+      'Compatible Android & iPhone (WhatsApp, SMS, Appels)',
+      'Résistant aux éclaboussures et à la transpiration',
+    ],
+    isNew: true,
+    isPromo: true,
+    stockStatus: 'En stock',
+    rating: 4.92,
+    reviewsCount: 47,
+  },
+  {
+    id: 'prod-beaute-01',
+    name: 'Sérum Éclat Botanica Vitamine C',
+    subtitle: 'Anti-taches, unification du teint & acide hyaluronique',
+    category: 'beaute',
+    categoryLabel: 'Beauté',
+    price: 18500,
+    oldPrice: 22000,
+    image: CAT_BEAUTE,
+    gallery: [CAT_BEAUTE],
+    colors: [
+      { name: 'Formule Pure 30ml', hex: '#F59E0B' },
+    ],
+    description: 'Élaboré pour révéler l’éclat naturel des peaux métissées et noires. Atténue visiblement les taches pigmentaires dues au soleil, resserre les pores et hydrate intensément sans laisser de film gras.',
+    details: [
+      'Flacon compte-gouttes en verre ambré 30 ml',
+      'Concentration active : Vitamine C pure 15% + Niacinamide',
+      'Texture fluide non comédogène ultra-pénétrante',
+      'Testé dermatologiquement, sans parabènes ni sulfates',
+    ],
+    isNew: false,
+    isPromo: true,
+    stockStatus: 'En stock',
+    rating: 4.95,
+    reviewsCount: 64,
+  },
+  {
+    id: 'prod-sac-02',
+    name: 'Sac Seau Akwa Élégance',
+    subtitle: 'Maroquinerie souple avec bandoulière gourmette',
+    category: 'sacs',
+    categoryLabel: 'Sacs',
+    price: 27000,
+    oldPrice: 30000,
+    image: CAT_SACS,
+    gallery: [CAT_SACS],
+    colors: [
+      { name: 'Cognac Doré', hex: '#9A5B32' },
+      { name: 'Chocolat Noir', hex: '#4A3027' },
+      { name: 'Crème Vanille', hex: '#F7F3EC' },
+    ],
+    description: 'Le compagnon idéal pour vos sorties à Bonapriso ou vos rendez-vous professionnels. Sa forme seauiconique apporte une touche chic et décontractée.',
+    details: [
+      'Fermoir cordon coulissant sécurisé',
+      'Pochette amovible intégrée',
+      'Finitions métalliques inoxydables',
+      'Finition cuir grainé haute résistance',
+    ],
+    stockStatus: 'Dernières pièces',
+    rating: 4.8,
+    reviewsCount: 21,
+  },
+  {
+    id: 'prod-acc-02',
+    name: 'Trio de Joncs Tressés Dorés',
+    subtitle: 'Plaqué or fin 18K résistant à l’eau',
+    category: 'accessoires',
+    categoryLabel: 'Accessoires',
+    price: 14000,
+    image: CAT_ACCESSOIRES,
+    gallery: [CAT_ACCESSOIRES],
+    colors: [
+      { name: 'Or Jaune 18K', hex: '#D4AF37' },
+      { name: 'Or Rose', hex: '#B76E79' },
+    ],
+    description: 'Ensemble de 3 bracelets joncs texturés et polis. Se portent seuls ou accumulés au poignet pour une brillance subtile et raffinée.',
+    details: [
+      'Acier chirurgical 316L avec placage PVD doré durable',
+      'Hypoallergénique, ne noircit pas avec la transpiration',
+      'Diamètre standard 6.2 cm ajustable délicatement',
+      'Livré dans son pochon velours beige ElsyShop',
+    ],
+    stockStatus: 'En stock',
+    rating: 4.9,
+    reviewsCount: 33,
+  },
+  {
+    id: 'prod-gadget-02',
+    name: 'Écouteurs Sans Fil Elsy Pods Pro',
+    subtitle: 'Réduction active du bruit & son spatial surround',
+    category: 'gadgets',
+    categoryLabel: 'Gadgets électroniques',
+    price: 24500,
+    oldPrice: 29000,
+    image: CAT_GADGETS,
+    gallery: [CAT_GADGETS],
+    colors: [
+      { name: 'Noir Mat Intense', hex: '#1C1917' },
+      { name: 'Blanc Céramique', hex: '#F9FAFB' },
+    ],
+    description: 'Profitez de vos playlists préférées et de vos appels téléphoniques avec une clarté cristalline. Boîtier de charge compact finition velours mat, tenant facilement dans un petit sac à main.',
+    details: [
+      'Jusqu’à 30 heures d’autonomie avec l’étui de recharge',
+      'Commandes tactiles intuitives (pause, morceau suivant, appel)',
+      'Connexion Bluetooth 5.3 instantanée dès l’ouverture',
+      'Microphones avec réduction de bruit ambiant pour les appels',
+    ],
+    isNew: true,
+    stockStatus: 'En stock',
+    rating: 4.88,
+    reviewsCount: 41,
+  },
+  {
+    id: 'prod-beaute-02',
+    name: 'Crème Régénérante Karité & Calendula',
+    subtitle: 'Nourrit en profondeur, adoucit et illumine',
+    category: 'beaute',
+    categoryLabel: 'Beauté',
+    price: 13500,
+    image: CAT_BEAUTE,
+    gallery: [CAT_BEAUTE],
+    colors: [
+      { name: 'Pot Verre Dépoli 50g', hex: '#E8DCCB' },
+    ],
+    description: 'Le soin cocon par excellence. Enrichie au beurre de karité pur d’Afrique de l’Ouest et en extrait de fleurs de calendula apaisantes, elle répare les peaux sèches et fatiguées.',
+    details: [
+      'Pot généreux 50 grammes avec spatule d’application en bois',
+      'Idéal en crème de nuit ou en base de maquillage veloutée',
+      'Parfum délicat et poudré 100% naturel',
+      'Convient à toute la famille et aux peaux sensibles',
+    ],
+    stockStatus: 'En stock',
+    rating: 4.96,
+    reviewsCount: 52,
+  },
+];
+
+export const DELIVERY_ZONES: DeliveryZone[] = [
+  {
+    city: 'Douala',
+    fee: 1000,
+    estimatedTime: 'Livraison le jour même ou sous 24h',
+    neighborhoods: [
+      'Bonapriso',
+      'Bonanjo',
+      'Bali',
+      'Ndogpassi',
+      'Bépanda',
+      'Bonapriso',
+      'Bonanjo',
+      'Bali',
+      'Ndogpassi',
+      'Yassa / Nyalla',
+      'Ndokoti',
+      'Cité des Palmiers',
+      'Autre quartier de Douala',
+    ],
+  },
+  {
+    city: 'Yaoundé',
+  fee: 2000,
+    estimatedTime: 'Livraison sous 24h à 48h par coursier',
+    neighborhoods: [
+      'Bastos',
+      'Omnisports',
+      'Odza',
+      'Mendong',
+      'Nlongkak',
+      'Biyem-Assi',
+      'Essos',
+      'Tsinga',
+      'Santa Barbara',
+      'Mimboman',
+      'Mokolo',
+      'Nkolbisson',
+      'Autre quartier de Yaoundé',
+    ],
+  },
+];
+
+export const INITIAL_ORDERS: OrderRecord[] = [
+ 
+  {
+    id: 'ELS-2512',
+    date: '05 Novembre 2026',
+    items: [
+      { name: 'Sérum Éclat Botanica Vitamine C', quantity: 1, color: 'Formule Pure 30ml', price: 18500 },
+    ],
+    subtotal: 18500,
+    deliveryFee: 2000,
+    total: 21500,
+    status: 'En cours de livraison',
+    deliveryCity: 'Yaoundé',
+    deliveryNeighborhood: 'Bastos, face ambassade',
+  },
+];
+
+export function formatFCFA(amount: number): string {
+  return `${amount.toLocaleString('fr-FR')} FCFA`;
+}
