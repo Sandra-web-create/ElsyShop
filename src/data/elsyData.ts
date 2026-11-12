@@ -1,5 +1,17 @@
 import { CategoryInfo, Product, DeliveryZone, OrderRecord } from '../types';
+// Chargement des images pour Vite et GitHub Pages
+const imageFiles = import.meta.glob(
+  '/src/assets/images/**/*.{jpg,jpeg,png,webp,svg}',
+  {
+    eager: true,
+    query: '?url',
+    import: 'default',
+  }
+) as Record<string, string>;
 
+const getImage = (path: string): string => {
+  return imageFiles[path] || '';
+};
 export const HERO_BANNER = '/src/assets/images/elsy_hero_banner_1793992168652.jpg';
 export const CAT_SACS = '/src/assets/images/category_sacs_1793992167079.jpg';
 export const CAT_ACCESSOIRES = '/src/assets/images/category_accessoires_1793992168916.jpg';
@@ -70,8 +82,9 @@ export const PRODUCTS: Product[] = [
     categoryLabel: 'Sacs',
     price: 6500,
     oldPrice: 8000,
-    image: '/src/assets/images/produits/sacs/sac-a-main.jpg',
-    gallery: ['/src/assets/images/produits/sacs/sac-a-main.jpg'],
+   image: getImage('/src/assets/images/produits/sacs/sac-a-main.jpg'),
+   gallery: [
+  getImage('/src/assets/images/produits/sacs/sac-a-main.jpg')
     colors: [
       { name: 'blanc', hex: '#f9f8f8' },
       { name: 'Bleu', hex: '#9facf6' },
