@@ -84,7 +84,8 @@ export const PRODUCTS: Product[] = [
     oldPrice: 8000,
    image: getImage('/src/assets/images/produits/sacs/sac-a-main.jpg'),
    gallery: [
-  getImage('/src/assets/images/produits/sacs/sac-a-main.jpg')
+  getImage('/src/assets/images/produits/sacs/sac-a-main.jpg'),
+     ],
     colors: [
       { name: 'blanc', hex: '#f9f8f8' },
       { name: 'Bleu', hex: '#9facf6' },
